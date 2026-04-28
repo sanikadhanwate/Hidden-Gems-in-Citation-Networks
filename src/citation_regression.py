@@ -98,13 +98,10 @@ df["community_encoded"] = le.fit_transform(
 # Fill any remaining NaN values in features
 feature_cols = [
     "age",                      # time available to accumulate citations
-    "out_degree",               # how many papers this paper cites
     "cluster_diversity",        # structural position diversity
     "bridge_score",             # bridge signal
     "citation_community_count", # cross-community recognition
-    "real_in_degree",           # within-dataset citations
     "community_size",           # size of home community
-    "community_encoded",        # which community
 ]
  
 for col in feature_cols:

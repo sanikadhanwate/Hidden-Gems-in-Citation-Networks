@@ -4,37 +4,34 @@
 MODEL
   Algorithm:          LightGBM Gradient Boosting Regressor
   Target:             log(1 + num_citations)
-  Features:           ['age', 'out_degree', 'cluster_diversity', 'bridge_score', 'citation_community_count', 'real_in_degree', 'community_size', 'community_encoded']
+  Features:           ['age', 'cluster_diversity', 'bridge_score', 'citation_community_count', 'community_size']
   Train size:         29,458
   Test size:          7,365
  
 PERFORMANCE
-  R² score:           0.9821
-  RMSE (log scale):   0.1270
-  Best iteration:     306
+  R² score:           0.1935
+  RMSE (log scale):   0.8531
+  Best iteration:     80
  
 FEATURE IMPORTANCES:
                  feature  importance
-              out_degree        2447
-       community_encoded        2378
-          community_size        1910
-                     age        1797
-       cluster_diversity         465
-          real_in_degree         110
-            bridge_score          60
-citation_community_count          13
+          community_size        1153
+                     age         711
+       cluster_diversity         284
+            bridge_score         198
+citation_community_count          54
  
 RESIDUALS
-  Mean (all):         -0.0002
-  Std (all):          0.1225
-  Under-cited papers: 24,256
-  Over-cited papers:  12,567
+  Mean (all):         -0.0014
+  Std (all):          0.8558
+  Under-cited papers: 20,086
+  Over-cited papers:  16,737
  
 BRIDGE vs NON-BRIDGE RESIDUALS
   Bridge papers (n=665):
-    Mean residual:    -0.0003
-    Median residual:  -0.0201
+    Mean residual:    -0.0180
+    Median residual:  -0.0515
   Non-bridge papers (n=36,158):
-    Mean residual:    -0.0002
-    Median residual:  -0.0383
-  Difference:         -0.0001
+    Mean residual:    -0.0011
+    Median residual:  -0.1152
+  Difference:         -0.0169
