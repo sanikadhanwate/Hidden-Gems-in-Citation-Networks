@@ -1,7 +1,7 @@
 # Hidden-Gems-in-Citation-Networks
 ### Finding Under-Cited Bridge Papers Using Graph Analysis, NLP, and Statistics
 
-> **CS554 NLP Final Project** — Sanika Dhanwate, Kaitlin Kartsen, Tanveer Kaur, Dan Nguyen
+> **CS554 NLP Final Project** 
 
 ---
 
@@ -9,9 +9,9 @@
 
 Some papers are scientifically important because they connect two different research fields. But researchers only discover papers by following citation trails within their own field — so bridge papers get systematically ignored. HIV researchers think a cross-domain paper belongs to psychology. Psychologists think it belongs to HIV research. Neither community cites it as much as it deserves.
 
-**Our hypothesis:** Interdisciplinary papers that bridge two research communities are chronically under-cited because neither field fully claims them.
+**The hypothesis:** Interdisciplinary papers that bridge two research communities are chronically under-cited because neither field fully claims them.
 
-**Our goal:** Find those papers, prove they are under-cited, and surface them as hidden gems.
+**The goal:** Find those papers, prove they are under-cited, and surface them as hidden gems.
 
 ---
 
@@ -91,9 +91,6 @@ train_data.jsonl (99MB, 36,823 papers)
 
 ---
 
-## My Contribution — Stage 2B: Bridge Scoring
-
-I was responsible for designing and implementing the complete bridge scoring algorithm in `src/community_and_bridge.py`.
 
 ### The Problem with Simple Betweenness Centrality
 Betweenness centrality — counting how often a paper sits on the shortest path between two others — sounds ideal for finding bridges. But on a graph this sparse, only 6 out of 306,326 papers had nonzero betweenness scores. The graph was too sparse for path-based measures.
@@ -129,7 +126,7 @@ Multiplication enforces AND logic — both signals must be high simultaneously. 
 ### Validation: The Two Signals Agreed
 38 out of the top 50 papers from Signal B also appeared in the top 50 from Signal C — **76% overlap** between two completely independently computed measures. This agreement confirms the pipeline is finding real signal, not noise.
 
-### My Results
+### The Results
 ```
 Bridge papers (nonzero score):  665  (1.8% of dataset)
 Top bridge candidates:           71  (top 10%)
